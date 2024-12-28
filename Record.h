@@ -1,6 +1,6 @@
 #pragma once
 #include "File.h"
-//记录类：记录每一次的记录方便生成记忆曲线
+//璁板綍绫伙細璁板綍姣忎竴娆＄殑璁板綍鏂逛究鐢熸垚璁板繂鏇茬嚎
 
 class Record
 {

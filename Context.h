@@ -2,22 +2,22 @@
 #include "Strategy.h"
 #include "Bookbase.h"
 /*
-Ëã·¨µÄÉÏÏÂÎÄ¹ÜÀíÆ÷
+ç®—æ³•çš„ä¸Šä¸‹æ–‡ç®¡ç†å™¨
 */
 
 class Context
 {
 public:
-	Context(Strategy* strategy);//´«ÈëÒ»¸öËã·¨¶ÔÏó£¬²¢ÇÒÓÉÕâ¸öÀàÌá¹©Í³Ò»µÄ½Ó¿Ú
+	Context(Strategy* strategy);//ä¼ å…¥ä¸€ä¸ªç®—æ³•å¯¹è±¡ï¼Œå¹¶ä¸”ç”±è¿™ä¸ªç±»æä¾›ç»Ÿä¸€çš„æ¥å£
 	void ContextInterface(unsigned int& score)
 	{
-		score += m_strategy->AlgorithmInterface(&global_b);//µ÷ÓÃËã·¨½Ó¿Ú£¬È»ºó»ñÈ¡·µ»ØÖµ
-		cout << "Ëã·¨µ÷ÓÃ" << endl;
+		score += m_strategy->AlgorithmInterface(&global_b);//è°ƒç”¨ç®—æ³•æ¥å£ï¼Œç„¶åè·å–è¿”å›å€¼
+		cout << "ç®—æ³•è°ƒç”¨" << endl;
 	}
 	void setbase(Bookbase* b);
 	~Context();
-	Bookbase* global_b;//È«¾Ö±äÁ¿²»ÄÜË½ÓĞ
+	Bookbase* global_b;//å…¨å±€å˜é‡ä¸èƒ½ç§æœ‰
 private:
-	Strategy* m_strategy;//Î¨Ò»µÄË½ÓĞ±äÁ¿£¬Ëã·¨Àà
+	Strategy* m_strategy;//å”¯ä¸€çš„ç§æœ‰å˜é‡ï¼Œç®—æ³•ç±»
 };
 

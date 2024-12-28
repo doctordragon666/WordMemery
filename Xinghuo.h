@@ -10,15 +10,15 @@ public:
     //void show();
     //virtual vector<pair<WordInfo, string>> getword();
     const int type = 3;
-    //const string exmaple = "ÖÐÎÄ£¬ Ó¢ÎÄ£¬ ×é";
+    //const string exmaple = "ä¸­æ–‡ï¼Œ è‹±æ–‡ï¼Œ ç»„";
     //void save(vector<pair<WordInfo, string>> v);
-    //¼ÇÒäÄ£Ê½
-    //¶ÁÈ¡×Ô¼ºµÄÎÄ¼þ
-    //·ÅÈëµ¥´ÊÁÐ±íÖÐ
-    //°´ÕÕ×éÃûÀ´½øÐÐ³éÈ¡
-    //ÏÔÊ¾·½·¨£º°´Àà±ðºÍ×éÀ´±íÊ¾
+    //è®°å¿†æ¨¡å¼
+    //è¯»å–è‡ªå·±çš„æ–‡ä»¶
+    //æ”¾å…¥å•è¯åˆ—è¡¨ä¸­
+    //æŒ‰ç…§ç»„åæ¥è¿›è¡ŒæŠ½å–
+    //æ˜¾ç¤ºæ–¹æ³•ï¼šæŒ‰ç±»åˆ«å’Œç»„æ¥è¡¨ç¤º
 private:
-    vector<Xing> m_word;//µ¥´ÊÁÐ±í
-    //ÓÃ»§´íÎóµÄµ¥´ÊÁÐ±í
+    vector<Xing> m_word;//å•è¯åˆ—è¡¨
+    //ç”¨æˆ·é”™è¯¯çš„å•è¯åˆ—è¡¨
 };
 

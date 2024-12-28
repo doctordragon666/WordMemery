@@ -6,11 +6,11 @@ using namespace std;
 class Choose
 {
 public:
-    virtual int ChooseInterface(Bookbase** global_b);//Ñ¡ÔñÌâÍ¨ÓÃ½Ó¿Ú
+    virtual int ChooseInterface(Bookbase** global_b);//é€‰æ‹©é¢˜é€šç”¨æ¥å£
     template<class T>
 	void shuffle_word(vector<T>& v, size_t s, int num)
 	{
-		//½«¸ÃÊı×é´òÂÒ²¢ÇÒ·µ»ØÈô¸É¸öÊı×éÖĞµÄÔªËØ
+		//å°†è¯¥æ•°ç»„æ‰“ä¹±å¹¶ä¸”è¿”å›è‹¥å¹²ä¸ªæ•°ç»„ä¸­çš„å…ƒç´ 
 		while (v.size() < num)
 		{
 			int tmp = random(s);

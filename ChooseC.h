@@ -8,6 +8,6 @@ class ChooseC :
     public Choose
 {
 public:
-    int ChooseInterface(Bookbase** global_b);//ʵ��Ӣѡ�еĽӿ�
+    int ChooseInterface(Bookbase** global_b);//实现英选中的接口
 };
 

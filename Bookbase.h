@@ -4,7 +4,7 @@
 class Bookbase
 {
 public:
-	//¹¹ÔìµÄÊ±ºò°ÑshowµÄÖ¸ÕëÖ±½ÓÖØĞ´
+	//æ„é€ çš„æ—¶å€™æŠŠshowçš„æŒ‡é’ˆç›´æ¥é‡å†™
 	Bookbase();
 	virtual ~Bookbase();
 	virtual void show();

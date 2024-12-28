@@ -1,7 +1,7 @@
 #pragma once
-//系统文件
+//绯荤粺鏂囦欢
 #include "File.h"
-//自定义类文件
+//鑷畾涔夌被鏂囦欢
 #include "Strategy.h"
 #include "AlgorithmFactory.h"
 #include "Context.h"

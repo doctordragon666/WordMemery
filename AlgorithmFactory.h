@@ -14,7 +14,6 @@ class AlgorithmFactory
 public:
 	static Context* CreateContext(int strategy)
 	{
-		//¾²Ì¬·½·¨
 		Context* context = nullptr;
 		switch (strategy)
 		{

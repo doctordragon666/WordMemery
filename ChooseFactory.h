@@ -11,10 +11,10 @@ public:
 		Choose* c = nullptr;
 		int choose = 0;
 		int score = 0;
-		cout << "Ñ¡ÔñÌâËã·¨ÊµÏÖ" << endl;
-		cout << "1.Ñ¡ÔñÖÐÎÄ" << endl;
-		cout << "2.Ñ¡ÔñÓ¢ÎÄ" << endl;
-		cout << "3.×Ô¶¨ÒåÑ¡Ïî¸öÊý" << endl;
+		cout << "é€‰æ‹©é¢˜ç®—æ³•å®žçŽ°" << endl;
+		cout << "1.é€‰æ‹©ä¸­æ–‡" << endl;
+		cout << "2.é€‰æ‹©è‹±æ–‡" << endl;
+		cout << "3.è‡ªå®šä¹‰é€‰é¡¹ä¸ªæ•°" << endl;
 		cin >> choose;
 		switch (choose)
 		{

@@ -4,6 +4,6 @@ class Strategy
 {
 public:
 	virtual int AlgorithmInterface(Bookbase** global_b) = 0;
-	//ËùÓĞµÄËã·¨¶¼Òª·µ»Ø·ÖÊı£¬²¢ÇÒ±ØĞë¼Ì³ĞÖØÔØ
+	//æ‰€æœ‰çš„ç®—æ³•éƒ½è¦è¿”å›åˆ†æ•°ï¼Œå¹¶ä¸”å¿…é¡»ç»§æ‰¿é‡è½½
 };
 

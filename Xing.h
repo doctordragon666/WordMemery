@@ -11,6 +11,6 @@ public:
 	friend istream& operator>>(istream& in, Xing& w);
 	//bool operator==(WordInfo& a);
 private:
-    int m_no;//第几组的题目
+    int m_no;//绗嚑缁勭殑棰樼洰
 };
 
