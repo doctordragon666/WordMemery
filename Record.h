@@ -12,9 +12,9 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, Record r);
 	friend std::istream& operator>>(std::istream& in, Record r);
 	void Save();
+	Record() = delete;
 private:
 	std::string m_date;
-	unsigned int m_score;
+	unsigned int m_score = -1;
 	string error = "";
 };
-

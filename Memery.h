@@ -2,9 +2,8 @@
 #include "Strategy.h"
 #include "Record.h"
 class Memery :
-    public Strategy
+	public Strategy
 {
 public:
-    int AlgorithmInterface(Bookbase** global_b);
+	int AlgorithmInterface(Bookbase*& global_b);
 };
-

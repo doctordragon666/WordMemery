@@ -63,7 +63,7 @@ fatigue 疲劳 0
 expend 花费 0
 evacuate 转移;撤离;疏散 0
 envoy 使节 0
-downtown 商业区的;在商业区的 0
+downtown 商业区的;在商业区的 1
 dip 下降;减少;浸 0
 dim 昏暗 0
 diagram 图解 0

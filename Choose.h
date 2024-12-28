@@ -6,8 +6,8 @@ using namespace std;
 class Choose
 {
 public:
-    virtual int ChooseInterface(Bookbase** global_b);//选择题通用接口
-    template<class T>
+	virtual int ChooseInterface(Bookbase*& global_b);//选择题通用接口
+	template<class T>
 	void shuffle_word(vector<T>& v, size_t s, int num)
 	{
 		//将该数组打乱并且返回若干个数组中的元素
@@ -23,4 +23,3 @@ public:
 		cout << endl << endl;
 	}
 };
-

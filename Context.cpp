@@ -6,7 +6,7 @@ Context::Context(Strategy* strategy)
 	global_b = nullptr;
 }
 
-void Context::setbase(Bookbase* b)
+void Context::setbase(Bookbase*& b)
 {
 	global_b = b;
 	cout << "设置数据库完毕" << endl;

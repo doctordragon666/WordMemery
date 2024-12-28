@@ -2,9 +2,8 @@
 #include "Modify.h"
 #include "Show.h"
 class Revise :
-    public Modify
+	public Modify
 {
 public:
-    bool ModifyAlgorithm(Bookbase** global_b);
+	bool ModifyAlgorithm(Bookbase*& global_b);
 };
-

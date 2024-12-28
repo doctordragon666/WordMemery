@@ -1,18 +1,18 @@
 #include "Review.h"
-#include "Config.h"
-int Review::AlgorithmInterface(Bookbase** global_b)
+
+int Review::AlgorithmInterface(Bookbase*& global_b)
 {
 	int score = 0;
-	cout << "ѡ��Ĭдģʽ" << endl;
-	cout << "1.ĬдӢ��" << endl;
-	cout << "2.Ĭд����" << endl;
+	cout << "选择复习模式" << endl;
+	cout << "1.听写中文" << endl;
+	cout << "2.听写英文" << endl;
 	int choose;
 	cin >> choose;
 	Dictation* target = new Dictation();
 	switch (choose)
 	{
 	case 1:
-		target= new DictationC();
+		target = new DictationC();
 		break;
 	case 2:
 		target = new DictationE();

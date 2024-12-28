@@ -1,6 +1,6 @@
 #include "ModifyFactory.h"
 
-int ModifyFactory::AlgorithmInterface(Bookbase** global_b)
+int ModifyFactory::AlgorithmInterface(Bookbase*& global_b)
 {
 	Modify* mod = new Modify();
 	cout << "请选择模式-1结束" << endl;

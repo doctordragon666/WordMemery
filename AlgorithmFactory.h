@@ -9,9 +9,8 @@
 #include "Search.h"
 #include "ModifyFactory.h"
 
-class AlgorithmFactory
+namespace AlgorithmFactory
 {
-public:
 	static Context* CreateContext(int strategy)
 	{
 		Context* context = nullptr;
@@ -47,4 +46,3 @@ public:
 		return context;
 	}
 };
-

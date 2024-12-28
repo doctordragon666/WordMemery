@@ -4,9 +4,8 @@
 #include "WordInfo.h"
 #include "Exam.h"
 class Show :
-    public Strategy
+	public Strategy
 {
 public:
-    int AlgorithmInterface(Bookbase** global_b);
+	int AlgorithmInterface(Bookbase*& global_b);
 };
-

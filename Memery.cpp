@@ -1,8 +1,8 @@
 #include "Memery.h"
 
-int Memery::AlgorithmInterface(Bookbase** global_b)
+int Memery::AlgorithmInterface(Bookbase*& global_b)
 {
-	vector<pair<WordInfo, string>> v = (*global_b)->getword();
+	vector<pair<WordInfo, string>> v = global_b->getword();
 	int error_word = 0;
 	bool flag = false;
 

@@ -22,7 +22,7 @@ Bookbase::Bookbase()
 vector<pair<WordInfo, string>> Bookbase::getword()
 {
 	vector<pair<WordInfo, string>> v;
-	for (auto i : m_word)
+	for (auto& i : m_word)
 	{
 		v.push_back(make_pair(i, ""));
 	}
@@ -49,7 +49,7 @@ void Bookbase::show()
 {
 	cout << "总书库显示" << endl;
 	int row_num = 0;
-	for (auto i : m_word)
+	for (auto& i : m_word)
 	{
 		cout << ++row_num << "  " << i;
 	}

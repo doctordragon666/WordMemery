@@ -78,9 +78,6 @@
     <ClCompile Include="Search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Modify.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Add.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -120,9 +117,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Review.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Config.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Kill.h">
@@ -238,10 +232,5 @@
     <Text Include="base\textbook.txt">
       <Filter>资源文件</Filter>
     </Text>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="icon1.ico">
-      <Filter>资源文件</Filter>
-    </Image>
   </ItemGroup>
 </Project>

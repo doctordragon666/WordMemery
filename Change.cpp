@@ -16,23 +16,23 @@ Change::Change()
 	cout << "你确定要更改吗？请输入词库类别（每次仅允许一次操作）" << endl;
 }
 
-int Change::AlgorithmInterface(Bookbase** global_b)
+int Change::AlgorithmInterface(Bookbase*& global_b)
 {
 	int choose = 0;
 	cin >> choose;
 	switch (choose)
 	{
 	case 1:
-		*global_b = new Bookbase();
+		global_b = new Bookbase();
 		break;
 	case 2:
-		*global_b = new Exam();
+		global_b = new Exam();
 		break;
 	case 3:
-		*global_b = new Xinghuo();
+		global_b = new Xinghuo();
 		break;
 	case 4:
-		*global_b = new WordBook();
+		global_b = new WordBook();
 		break;
 	case 0:
 		break;

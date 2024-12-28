@@ -3,10 +3,10 @@
 #include "ChooseC.h"
 #include "ChooseE.h"
 #include "MulChoose.h"
-class ChooseFactory:public Strategy
+class ChooseFactory :public Strategy
 {
 public:
-	int AlgorithmInterface(Bookbase**global_b)
+	int AlgorithmInterface(Bookbase*& global_b)
 	{
 		Choose* c = nullptr;
 		int choose = 0;
@@ -34,4 +34,3 @@ public:
 		return score;
 	}
 };
-

@@ -1,5 +1,4 @@
 #include "Record.h"
-#include "Config.h"
 
 Record::Record(unsigned int score)
 {
@@ -8,7 +7,7 @@ Record::Record(unsigned int score)
 	localtime_s(nowtime, &now);
 
 	this->m_score = score;
-	this->m_date = to_string(nowtime->tm_year+1900) + ":" + to_string(nowtime->tm_mon + 1) + ":" + to_string(nowtime->tm_mday)
+	this->m_date = to_string(nowtime->tm_year + 1900) + ":" + to_string(nowtime->tm_mon + 1) + ":" + to_string(nowtime->tm_mday)
 		+ " " + to_string(nowtime->tm_hour) + ":" + to_string(nowtime->tm_min) + ":" + to_string(nowtime->tm_sec);
 	delete nowtime;
 }

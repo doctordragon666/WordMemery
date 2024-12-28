@@ -4,7 +4,6 @@
 class Bookbase
 {
 public:
-	//构造的时候把show的指针直接重写
 	Bookbase();
 	virtual ~Bookbase();
 	virtual void show();
@@ -15,4 +14,3 @@ public:
 protected:
 	vector<WordInfo> m_word;
 };
-

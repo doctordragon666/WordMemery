@@ -156,7 +156,6 @@
     <ClCompile Include="Kill.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Memery.cpp" />
-    <ClCompile Include="Modify.cpp" />
     <ClCompile Include="ModifyFactory.cpp" />
     <ClCompile Include="MulChoose.cpp" />
     <ClCompile Include="Record.cpp" />
@@ -180,7 +179,6 @@
     <ClInclude Include="ChooseC.h" />
     <ClInclude Include="ChooseE.h" />
     <ClInclude Include="ChooseFactory.h" />
-    <ClInclude Include="Config.h" />
     <ClInclude Include="Context.h" />
     <ClInclude Include="Del.h" />
     <ClInclude Include="Dictation.h" />
@@ -217,9 +215,6 @@
     <Text Include="test.txt" />
     <Text Include="user.txt" />
     <Text Include="word.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="icon1.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

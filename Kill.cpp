@@ -1,8 +1,8 @@
 #include "Kill.h"
 
-int Kill::AlgorithmInterface(Bookbase** global_b)
+int Kill::AlgorithmInterface(Bookbase*& global_b)
 {
-	vector<pair<WordInfo, string>> v = (*global_b)->getword();
+	vector<pair<WordInfo, string>> v = global_b->getword();
 	size_t i = 0;
 	if (v.size() == 0)
 	{
@@ -33,12 +33,12 @@ int Kill::AlgorithmInterface(Bookbase** global_b)
 			i++;
 			break;
 		}
-		if (v.size() == 0 ||  i == v.size())
+		if (v.size() == 0 || i == v.size())
 		{
 			break;
 		}
 	}
 
-	(*global_b)->save(v);
+	global_b->save(v);
 	return 0;
 }

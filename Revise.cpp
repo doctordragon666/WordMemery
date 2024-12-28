@@ -1,13 +1,13 @@
 #include "Revise.h"
 
-bool Revise::ModifyAlgorithm(Bookbase** global_b)
+bool Revise::ModifyAlgorithm(Bookbase*& global_b)
 {
 	system("cls");
-	vector<pair<WordInfo, string>> target = (*global_b)->getword();
+	vector<pair<WordInfo, string>> target = global_b->getword();
 	Show().AlgorithmInterface(global_b);
 	bool flag = true;
 	string s = "";
-	if ((*global_b)->type == 1)
+	if (global_b->type == 1)
 	{
 		flag = false;
 	}
@@ -21,7 +21,7 @@ bool Revise::ModifyAlgorithm(Bookbase** global_b)
 		{
 			return false;
 		}
-		(*global_b)->example();
+		global_b->example();
 		cout << "按M键退出" << endl;
 
 		string e;
@@ -45,7 +45,7 @@ bool Revise::ModifyAlgorithm(Bookbase** global_b)
 		cout << endl << "添加成功" << endl;
 	}
 
-	(*global_b)->save(target);
+	global_b->save(target);
 
 	return true;
 }

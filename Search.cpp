@@ -4,9 +4,9 @@ Search::Search()
 	cout << "搜索模式开启" << endl;
 }
 
-int Search::AlgorithmInterface(Bookbase** global_b)
+int Search::AlgorithmInterface(Bookbase*& global_b)
 {
-	vector<pair<WordInfo, string>> v = (*global_b)->getword();
+	vector<pair<WordInfo, string>> v = global_b->getword();
 	string s;
 	bool flag = true;
 	int i;

@@ -5,8 +5,7 @@
 #include "DictationE.h"
 
 class Review :
-    public Strategy
+	public Strategy
 {
-    int AlgorithmInterface(Bookbase** global_b);
+	int AlgorithmInterface(Bookbase*& global_b);
 };
-

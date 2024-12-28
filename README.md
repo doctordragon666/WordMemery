@@ -1,68 +1,131 @@
 # Word Memory
+[English Version](README_en.md)
 
 Word Memory 是一个用于记单词的命令行程序。它可以让你在终端中输入单词、解释和例句，并将其保存到本地文件中，以便后续查看和编辑。你还可以通过查询已保存的单词来进行复习。
 
-## 安装
+使用下面的方法使用源代码。
 
 1. 克隆本仓库到本地。
 
-   ```
-   git clone https://github.com/doctordragon666/Word_Memery.git
+   ```shell
+   $ git clone https://github.com/doctordragon666/Word_Memery.git
    ```
 
-2. 用visual stdio打开项目文件，点击sln文件，点击运行即可
+2. 用`visual stdio`打开项目文件，点击`sln`文件，点击运行即可
 
 3. 编译完成后，可以在 `x64` 目录下找到可执行文件 `WordMemery`。
 
-## 用法
+## 软件架构
 
-在进入程序后，命令行会显示如何使用
+充分考验对设计模式的使用。
 
-## 类图
+当然这个项目实际上踩了很多的设计模式的坑，比如过早的优化。所以后期不打算优化了，程序太大了，而且类很多很多。
 
-以下是本项目的类图：
+程序的主要类图如下
 
-``` mermaid
+```mermaid
 classDiagram
-    class WordDB {
-      +insert_word(const std::string& word, const std::string& meaning, const std::string& example) : bool
-      +query_word(const std::string& word) : std::tuple<std::string, std::string, std::string>
-      +update_word(const std::string& word, const std::string& meaning, const std::string& example) : bool
-      +delete_word(const std::string& word) : bool
-      +list_words() : std::vector<std::string>
-      +clear_words() : bool
-    }
-    class Word {
-      -word : std::string
-      -meaning : std::string
-      -example : std::string
-      +Word(const std::string& word, const std::string& meaning, const std::string& example)
-      +get_word() : std::string
-      +get_meaning() : std::string
-      +get_example() : std::string
-      +set_meaning(const std::string& meaning)
-      +set_example(const std::string& example)
-      +to_string() : std::string
-    }
-    WordDB -- Word
-    class WordMenu {
-      -db : WordDB&
-      +show_menu() : void
-      +add_word() : bool
-      +query_word() : bool
-      +edit_word() : bool
-      +delete_word() : bool
-      +list_words() : bool
-      +clear_words() : bool
-    }
-    WordMenu -- WordDB
-    class Console {
-      +get_input(const std::string& prompt) : std::string
-      +print(const std::string& message) : void
-      +print_error(const std::string& message) : void
-    }
-    WordMenu -- Console
-    Console -- WordDB
+note for Bookbase "用来加载各种的字典"
+note for Context "根据上下文选择不同的算法"
+note for Record "保存记单词的分数"
+
+class Bookbase
+class Context
+class Record
+class Strategy 
+class AlgorithmFactory
+class WordInfo
+
+AlgorithmFactory --> Context
+Context --o Strategy
+Context --o Bookbase
+Bookbase ..> WordInfo
+
+class Xing
+class BookWord
+class Xinghuo
+Xing --|> WordInfo
+BookWord --|> WordInfo
+Xinghuo --|> WordInfo
 ```
 
-其中，`Word` 类表示一个单词和其相关信息，`WordDB` 类表示单词库数据库（即 `word_db.db` 文件），`WordMenu` 类表示命令行菜单，`Console` 类表示控制台输入输出。
+`Strategy`类是个很大的类，这里我再单独开一个类图出来
+
+```mermaid
+classDiagram
+class Strategy
+class ChooseFactory
+class Review
+class Kill
+class Show
+class Change
+class Memery
+class ModifyFactory
+class Search
+
+class Choose
+class ChooseC
+class ChooseE
+class MulChoose
+
+class Dictation
+class DictationC
+class DictationE
+
+class ModifyFactory
+class Add
+class Del
+class Revise
+class SQL
+
+ChooseFactory --|> Strategy
+Review --|> Strategy
+Kill --|> Strategy
+Show --|> Strategy
+Change --|> Strategy
+Memery --|> Strategy
+ModifyFactory --|> Strategy
+Search --|> Strategy
+
+ChooseFactory --o Choose
+Choose --|> ChooseC
+Choose --|> ChooseE
+Choose --|> MulChoose
+
+Dictation --o Review
+Dictation --|> DictationC
+Dictation --|> DictationE
+
+ModifyFactory --o Modify
+Modify --|> Add
+Modify --|> Del
+Modify --|> Revise
+Modify --|> SQL
+```
+
+
+
+## 使用说明
+
+在进入程序后，命令行会显示如何使用。显示界面如下
+
+```shell
+$ WordMermory.exe 
+------------------------------单词系统-----------------------------------
+||
+||              1.选择题
+||              2.默写题
+||              3.斩词
+||              4.查看记录
+||              5.更换词库
+||              6.记忆模式
+||              7.修改模式
+||              8.搜索模式
+||              0.退出系统
+||                       请输入你的选择：_________
+
+```
+
+
+## 许可证
+本项目采用MIT许可证。

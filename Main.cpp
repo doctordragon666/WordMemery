@@ -4,9 +4,12 @@
 增删改查
 */
 #define _CRT_SECURE_NO_WARNINGS
-#include "Config.h"
+#include "File.h"
+#include "Bookbase.h"
+#include "Context.h"
+#include "AlgorithmFactory.h"
 
-void menu()
+static void menu()
 {
 	cout << "------------------------------单词系统-----------------------------------\n||\n" << internal;
 	cout << "||\t\t1.选择题" << endl;
@@ -33,8 +36,10 @@ int main()
 		menu();
 		int choose = -1;
 		cin >> choose;
-		if (!isrange(choose))
-		{
+		// 输入检查
+		if (cin.fail() || !isrange(choose)) {
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			continue;
 		}
 		Context* context = AlgorithmFactory::CreateContext(choose);
@@ -42,7 +47,6 @@ int main()
 		{
 			context->setbase(root_base);
 			context->ContextInterface(score);
-			root_base = context->global_b;
 		}
 		else
 		{
@@ -60,4 +64,3 @@ int main()
 	system("pause");
 	return 0;
 }
-

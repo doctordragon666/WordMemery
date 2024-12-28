@@ -7,9 +7,8 @@
 #include "SQL.h"
 #include "Record.h"
 class ModifyFactory :
-    public Strategy
+	public Strategy
 {
 public:
-    int AlgorithmInterface(Bookbase** global_b);
+	int AlgorithmInterface(Bookbase*& global_b);
 };
-
