@@ -6,7 +6,7 @@ int Memery::AlgorithmInterface(Bookbase** global_b)
 	int error_word = 0;
 	bool flag = false;
 
-	cout << "ÇëÊäÈëÄãµÄÄ¿±êµ¥´Ê¸öÊý" << endl;
+	cout << "è¯·è¾“å…¥ä½ çš„ç›®æ ‡å•è¯ä¸ªæ•°" << endl;
 	int target = 0;
 	cin >> target;
 	map<int, pair<WordInfo, string>> target_word;
@@ -15,7 +15,7 @@ int Memery::AlgorithmInterface(Bookbase** global_b)
 		int t = random(v.size());
 		target_word.insert(make_pair(t, v[t]));
 	}
-	cout << "³éÈ¡Íê±Ï" << endl;
+	cout << "æŠ½å–å®Œæ¯•" << endl;
 	for (auto i : target_word)
 	{
 		cout << i.first << i.second.first;
@@ -31,7 +31,7 @@ int Memery::AlgorithmInterface(Bookbase** global_b)
 			system("pause");
 			system("cls");
 			cout << it->second.first.getc();
-			cout << "ÇëÊäÈëÒâË¼" << endl;
+			cout << "è¯·è¾“å…¥æ„æ€" << endl;
 			string mean;
 			cin >> mean;
 			if (mean == it->second.first.gete())
@@ -44,22 +44,22 @@ int Memery::AlgorithmInterface(Bookbase** global_b)
 			}
 			else
 			{
-				cout << "ÊäÈë´íÎó,ÕýÈ·´ð°¸ÊÇ" << it->second.first.gete();
+				cout << "è¾“å…¥é”™è¯¯,æ­£ç¡®ç­”æ¡ˆæ˜¯" << it->second.first.gete();
 				error_word++;
 				it--;
 			}
 		}
 		if (1.0 * error_word / (double)target < 0.001)
 		{
-			cout << "¼ÇÒäÍê³É" << endl;
-			Record r("±¾´ÎÒ»¹²¼Ç×¡ÁË" + to_string(target) + "¸öµ¥´Ê");
+			cout << "è®°å¿†å®Œæˆ" << endl;
+			Record r("æœ¬æ¬¡ä¸€å…±è®°ä½äº†" + to_string(target) + "ä¸ªå•è¯");
 			r.Save();
 			break;
 			system("pause");
 		}
 		else
 		{
-			cout << "Çë¼ÌÐø¼ÇÒä" << endl;
+			cout << "è¯·ç»§ç»­è®°å¿†" << endl;
 		}
 	}
 	return 0;

@@ -9,7 +9,7 @@ Context::Context(Strategy* strategy)
 void Context::setbase(Bookbase* b)
 {
 	global_b = b;
-	cout << "ÉèÖÃÊý¾Ý¿âÍê±Ï" << endl;
+	cout << "è®¾ç½®æ•°æ®åº“å®Œæ¯•" << endl;
 }
 
 Context::~Context()

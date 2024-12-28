@@ -71,7 +71,7 @@ vector<string> WordInfo::getcl()
 WordInfo& WordInfo::operator++()
 {
 	++m_error_time;
-	return *this;//返回引用，因为每次只能对同一it相加
+	return *this;//杩斿洖寮曠敤锛屽洜涓烘瘡娆″彧鑳藉鍚屼竴it鐩稿姞
 }
 
 int WordInfo::gettime()

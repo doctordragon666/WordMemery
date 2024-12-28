@@ -2,7 +2,7 @@
 
 void ExamWord::showself()
 {
-	cout << English << " " << Chinese << " À´Ô´£º" << source << "\n";
+	cout << English << " " << Chinese << " æ¥æºï¼š" << source << "\n";
 }
 
 ExamWord::ExamWord()
@@ -21,7 +21,7 @@ ExamWord::ExamWord(WordInfo w, string s)
 ExamWord& ExamWord::operator++()
 {
 	++m_error_time;
-	return *this;//·µ»ØÒýÓÃ£¬ÒòÎªÃ¿´ÎÖ»ÄÜ¶ÔÍ¬Ò»itÏà¼Ó
+	return *this;//è¿”å›žå¼•ç”¨ï¼Œå› ä¸ºæ¯æ¬¡åªèƒ½å¯¹åŒä¸€itç›¸åŠ 
 }
 ostream& operator<<(ostream& out, ExamWord& w)
 {

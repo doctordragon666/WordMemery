@@ -7,13 +7,13 @@
 
 Change::Change()
 {
-	cout << "¸Ä±ä´Ê¿âÀàÐÍ" << endl;
-	cout << "1.×Ü´Ê¿â" << endl;
-	cout << "2.¿¼ÊÔ´Ê¿â" << endl;
-	cout << "3.ÐÇ»ð´Ê¿â" << endl;
-	cout << "4.Êé±¾´Ê¿â" << endl;
-	cout << "0.È¡Ïû¸ü¸Ä" << endl;
-	cout << "ÄãÈ·¶¨Òª¸ü¸ÄÂð£¿ÇëÊäÈë´Ê¿âÀà±ð£¨Ã¿´Î½öÔÊÐíÒ»´Î²Ù×÷£©" << endl;
+	cout << "æ”¹å˜è¯åº“ç±»åž‹" << endl;
+	cout << "1.æ€»è¯åº“" << endl;
+	cout << "2.è€ƒè¯•è¯åº“" << endl;
+	cout << "3.æ˜Ÿç«è¯åº“" << endl;
+	cout << "4.ä¹¦æœ¬è¯åº“" << endl;
+	cout << "0.å–æ¶ˆæ›´æ”¹" << endl;
+	cout << "ä½ ç¡®å®šè¦æ›´æ”¹å—ï¼Ÿè¯·è¾“å…¥è¯åº“ç±»åˆ«ï¼ˆæ¯æ¬¡ä»…å…è®¸ä¸€æ¬¡æ“ä½œï¼‰" << endl;
 }
 
 int Change::AlgorithmInterface(Bookbase** global_b)
@@ -41,5 +41,5 @@ int Change::AlgorithmInterface(Bookbase** global_b)
 	}
 	system("pause");
 	system("cls");
-	return 0;//·µ»Ø0£¬ÒòÎª¸ü»»Êé¿â²»Ôö¼ÓÈÎºÎµÄ·ÖÊý
+	return 0;//è¿”å›ž0ï¼Œå› ä¸ºæ›´æ¢ä¹¦åº“ä¸å¢žåŠ ä»»ä½•çš„åˆ†æ•°
 }

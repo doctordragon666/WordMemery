@@ -2,16 +2,16 @@
 
 Bookbase::Bookbase()
 {
-	cout << "×ÜÊé¿â´´½¨" << endl;
-	cout << "×ÜÊé¿â¿ªÊ¼¼ÓÔØ" << endl;
+	cout << "æ€»ä¹¦åº“åˆ›å»º" << endl;
+	cout << "æ€»ä¹¦åº“å¼€å§‹åŠ è½½" << endl;
 	ifstream ifs(TEST_FILE, ios::out);
 	if (!ifs.is_open())
 	{
-		cout << "ÎÄ¼þ´ò¿ªÊ§°Ü";
+		cout << "æ–‡ä»¶æ‰“å¼€å¤±è´¥";
 		return;
 	}
 	WordInfo w;
-	while (ifs >> w) //ÖðÐÐ¶ÁÈ¡£¬Ö±µ½½áÊø
+	while (ifs >> w) //é€è¡Œè¯»å–ï¼Œç›´åˆ°ç»“æŸ
 	{
 		this->m_word.push_back(w);
 	}
@@ -34,7 +34,7 @@ Bookbase::~Bookbase()
 	ofstream ofs(TEST_FILE, ios::in | ios::trunc);
 	if (!ofs.is_open())
 	{
-		cout << "ÎÄ¼þ´ò¿ªÊ§°Ü";
+		cout << "æ–‡ä»¶æ‰“å¼€å¤±è´¥";
 		return;
 	}
 	for (vector<WordInfo>::iterator it = m_word.begin(); it != m_word.end(); it++)
@@ -47,7 +47,7 @@ Bookbase::~Bookbase()
 
 void Bookbase::show()
 {
-	cout << "×ÜÊé¿âÏÔÊ¾" << endl;
+	cout << "æ€»ä¹¦åº“æ˜¾ç¤º" << endl;
 	int row_num = 0;
 	for (auto i : m_word)
 	{
@@ -67,5 +67,5 @@ void Bookbase::save(vector<pair<WordInfo, string>> v)
 
 void Bookbase::example()
 {
-	cout << "´Ê¿âÊ¾Àý£º ÖÐÎÄ¿Õ¸ñÓ¢ÎÄ" << endl;
+	cout << "è¯åº“ç¤ºä¾‹ï¼š ä¸­æ–‡ç©ºæ ¼è‹±æ–‡" << endl;
 }

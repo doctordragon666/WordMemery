@@ -2,12 +2,12 @@
 
 int DictationE::DictationAlgorithm(Bookbase** global_b)
 {
-	//Ä¬Ğ´Ó¢ÎÄ
+	//é»˜å†™è‹±æ–‡
 	system("cls");
 	string answer;
 	int score = 0;
 	vector<pair<WordInfo, string>> v = (*global_b)->getword();
-	//±£Ö¤ÓĞµ¥´Ê¼Ç 
+	//ä¿è¯æœ‰å•è¯è®° 
 	if (v.empty())
 	{
 		system("pause");
@@ -18,23 +18,23 @@ int DictationE::DictationAlgorithm(Bookbase** global_b)
 	{
 		int s = random(v.size());
 		auto t = v[s].first.getcl()[random(v[s].first.getcl().size())];
-		cout << "\t\tÇëÊäÈëµ¥´Ê¡°" << t << "¡±µÄÓ¢ÎÄÒâË¼£¨ÊäÈëM·µ»Ø²Ëµ¥£©£º";
+		cout << "\t\tè¯·è¾“å…¥å•è¯â€œ" << t << "â€çš„è‹±æ–‡æ„æ€ï¼ˆè¾“å…¥Mè¿”å›èœå•ï¼‰ï¼š";
 		cin >> answer;
 		if (answer == "M")
 		{
-			cout << "\n\n\t\t±¾´Î×Ü¹²µÃ" << score << "·Ö!!!\n\n\t\t";
+			cout << "\n\n\t\tæœ¬æ¬¡æ€»å…±å¾—" << score << "åˆ†!!!\n\n\t\t";
 			system("pause");
 			system("cls");
 			return score;
 		}
 		if (v[s].first.gete() == answer) {
-			cout << "\n\t\t¹§Ï²Äã´ğ¶ÔÁË£¡£¡£¡,·ÖÊı£º" << ++score << "\n\n\t\t";
+			cout << "\n\t\tæ­å–œä½ ç­”å¯¹äº†ï¼ï¼ï¼,åˆ†æ•°ï¼š" << ++score << "\n\n\t\t";
 		}
 		else {
-			cout << endl << "\t\t´ğ´íÁË¡°" << t << "¡±µÄÓ¢ÎÄÊÇ:" << v[s].first.gete() << endl << endl;
+			cout << endl << "\t\tç­”é”™äº†â€œ" << t << "â€çš„è‹±æ–‡æ˜¯:" << v[s].first.gete() << endl << endl;
 			++v[s].first;
 		}
-		cout << "\n\t\t<»Ø³µÏÂÒ»Ìâ>";
+		cout << "\n\t\t<å›è½¦ä¸‹ä¸€é¢˜>";
 		system("pause");
 		system("cls");
 	}

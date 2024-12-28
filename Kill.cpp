@@ -6,12 +6,12 @@ int Kill::AlgorithmInterface(Bookbase** global_b)
 	size_t i = 0;
 	if (v.size() == 0)
 	{
-		cout << "单词为空";
+		cout << "鍗曡瘝涓虹┖";
 	}
 	while (true)
 	{
 		v[i].first.showself();
-		cout << endl << "是否要删掉这个单词K,返回上一级A, 退出按M: \t";
+		cout << endl << "鏄惁瑕佸垹鎺夎繖涓崟璇岾,杩斿洖涓婁竴绾, 閫�鍑烘寜M: \t";
 		char c = 'D';
 		cin >> c;
 		switch (c)

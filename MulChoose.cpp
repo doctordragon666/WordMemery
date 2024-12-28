@@ -3,16 +3,16 @@
 int MulChoose::ChooseInterface(Bookbase** global_b)
 {
 	system("cls");
-	cout << "ÇëÊäÈëÄãµÄÑ¡Ïî£¬×î´ó²»³¬¹ı10";
+	cout << "è¯·è¾“å…¥ä½ çš„é€‰é¡¹ï¼Œæœ€å¤§ä¸è¶…è¿‡10";
 	int num;
 	cin >> num;
 	vector<pair<WordInfo, string>> w_lst = (*global_b)->getword();
 	int score = 0;
-	//¸ù¾İÖĞÎÄÑ¡ÔñÓ¢ÎÄ
+	//æ ¹æ®ä¸­æ–‡é€‰æ‹©è‹±æ–‡
 	system("cls");
 	if (w_lst.size() < num)
 	{
-		cout << "µ¥´Ê²»×ã";
+		cout << "å•è¯ä¸è¶³";
 		system("pause");
 		system("cls");
 		return 0;
@@ -22,10 +22,10 @@ int MulChoose::ChooseInterface(Bookbase** global_b)
 		vector<int> book;
 		int t = random(w_lst.size());
 		book.push_back(t);
-		cout << "\t\tÇëÑ¡ÔñÖĞÎÄ¡°" << w_lst[t].first.getcl()[random(w_lst[t].first.getcl().size())] << "¡±µÄÓ¢Óïµ¥´Ê£¨ÊäÈëM·µ»Ø²Ëµ¥£©£º";
+		cout << "\t\tè¯·é€‰æ‹©ä¸­æ–‡â€œ" << w_lst[t].first.getcl()[random(w_lst[t].first.getcl().size())] << "â€çš„è‹±è¯­å•è¯ï¼ˆè¾“å…¥Mè¿”å›èœå•ï¼‰ï¼š";
 
-		string wer = w_lst[t].first.gete();//´æºÃ´ğ°¸; 
-		//³õÊ¼»¯Ñ¡Ïî
+		string wer = w_lst[t].first.gete();//å­˜å¥½ç­”æ¡ˆ; 
+		//åˆå§‹åŒ–é€‰é¡¹
 		shuffle_word(book, w_lst.size(), num);
 		for (int i = 0; i < num; i++)
 		{
@@ -36,12 +36,12 @@ int MulChoose::ChooseInterface(Bookbase** global_b)
 				cout << endl;
 			}
 		}
-		cout << "\n\n\t\t´ğ°¸£º";
-		//ÊäÈë´ğ°¸
+		cout << "\n\n\t\tç­”æ¡ˆï¼š";
+		//è¾“å…¥ç­”æ¡ˆ
 		char answer;
 		cin >> answer;
 		if (answer == 'M') {
-			cout << "\n\n\t\t±¾´Î×Ü¹²µÃ" << score << "·Ö!!!\n\n\t\t";
+			cout << "\n\n\t\tæœ¬æ¬¡æ€»å…±å¾—" << score << "åˆ†!!!\n\n\t\t";
 			system("pause");
 			system("cls");
 			return score;
@@ -50,7 +50,7 @@ int MulChoose::ChooseInterface(Bookbase** global_b)
 		{
 			if (answer - 'A' > num)
 			{
-				cout << "\n\t\tÊäÈëÓĞÎó£¡£¡\n\n";
+				cout << "\n\t\tè¾“å…¥æœ‰è¯¯ï¼ï¼\n\n";
 				cin >> answer;
 				continue;
 			}
@@ -58,14 +58,14 @@ int MulChoose::ChooseInterface(Bookbase** global_b)
 		}
 		if (w_lst[book[answer - 'A']].first.gete() == wer)
 		{
-			cout << "\n\t\t¹§Ï²Äã´ğ¶ÔÁË!!!,·ÖÊı£º" << ++score << "\n\n\t\t";
+			cout << "\n\t\tæ­å–œä½ ç­”å¯¹äº†!!!,åˆ†æ•°ï¼š" << ++score << "\n\n\t\t";
 		}
 		else
 		{
-			cout << "\n\t\t\a´ğ°¸´íÎó£¬ÕıÈ·´ğ°¸ÊÇ£º" << wer << endl;
+			cout << "\n\t\t\aç­”æ¡ˆé”™è¯¯ï¼Œæ­£ç¡®ç­”æ¡ˆæ˜¯ï¼š" << wer << endl;
 			++w_lst[t].first;
 		}
-		cout << "\n\t\t<»Ø³µÏÂÒ»Ìâ>";
+		cout << "\n\t\t<å›è½¦ä¸‹ä¸€é¢˜>";
 		system("pause");
 		system("cls");
 		book.clear();

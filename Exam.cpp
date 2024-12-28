@@ -2,15 +2,15 @@
 
 Exam::Exam()
 {
-	cout << "¿¼ÊÔ¿â¿ªÊ¼¼ÓÔØ" << endl;
+	cout << "è€ƒè¯•åº“å¼€å§‹åŠ è½½" << endl;
 	ifstream ifs(EXAM_FILE, ios::out);
 	if (!ifs.is_open())
 	{
-		cout << "ÎÄ¼ş´ò¿ªÊ§°Ü";
+		cout << "æ–‡ä»¶æ‰“å¼€å¤±è´¥";
 		return;
 	}
 	ExamWord ew;
-	while (ifs >> ew) //ÖğĞĞ¶ÁÈ¡£¬Ö±µ½½áÊø
+	while (ifs >> ew) //é€è¡Œè¯»å–ï¼Œç›´åˆ°ç»“æŸ
 	{
 		cout << ew;
 		this->m_word.push_back(ew);
@@ -23,7 +23,7 @@ Exam::~Exam()
 	ofstream ofs(EXAM_FILE, ios::in | ios::trunc);
 	if (!ofs.is_open())
 	{
-		cout << "ÎÄ¼ş´ò¿ªÊ§°Ü";
+		cout << "æ–‡ä»¶æ‰“å¼€å¤±è´¥";
 		return;
 	}
 	for (vector<ExamWord>::iterator it = m_word.begin(); it != m_word.end(); it++)
@@ -32,7 +32,7 @@ Exam::~Exam()
 	}
 	ofs.close();
 	this->m_word.clear();
-	cout << "exam¿¼ÊÔÌâ¿âÒÑ¾­É¾³ı";
+	cout << "examè€ƒè¯•é¢˜åº“å·²ç»åˆ é™¤";
 }
 
 vector<pair<WordInfo, string>> Exam::getword()
@@ -110,5 +110,5 @@ void Exam::show()
 
 void Exam::example()
 {
-	cout << "Ó¢Óï¿Õ¸ñººÓï¿Õ¸ñÀ´Ô´" << endl;
+	cout << "è‹±è¯­ç©ºæ ¼æ±‰è¯­ç©ºæ ¼æ¥æº" << endl;
 }

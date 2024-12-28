@@ -4,11 +4,11 @@ bool Add::ModifyAlgorithm(Bookbase** global_b)
 {
 	system("cls");
 	vector<pair<WordInfo, string>> target = (*global_b)->getword();
-	cout << "ÇëÊäÈëÌí¼ÓµÄµ¥´ÊÐÅÏ¢£¬ Ê¾ÀýÈçÏÂ" << endl;
+	cout << "è¯·è¾“å…¥æ·»åŠ çš„å•è¯ä¿¡æ¯ï¼Œ ç¤ºä¾‹å¦‚ä¸‹" << endl;
 	(*global_b)->example();
-	cout << "°´M¼üÍË³ö" << endl;
+	cout << "æŒ‰Mé”®é€€å‡º" << endl;
 	bool flag = true;
-	string s = "";// Ê£ÏÂµÄÄÚÈÝ½»¸øwordinfoÈ¥½âÎö
+	string s = "";// å‰©ä¸‹çš„å†…å®¹äº¤ç»™wordinfoåŽ»è§£æž
 	if ((*global_b)->getword()[0].second == "")
 	{
 		flag = false;
@@ -34,11 +34,11 @@ bool Add::ModifyAlgorithm(Bookbase** global_b)
 		WordInfo w(e, c);
 		target.emplace_back(w, s);
 
-		cout << endl << "Ìí¼Ó³É¹¦" << endl;
+		cout << endl << "æ·»åŠ æˆåŠŸ" << endl;
 		cout.flush();
 	}
 
 	(*global_b)->save(target);
-	cout << "ÒÑ¾­±£´æÍê³É";
+	cout << "å·²ç»ä¿å­˜å®Œæˆ";
 	return true;
 }

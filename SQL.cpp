@@ -3,7 +3,7 @@
 bool SQL::ModifyAlgorithm(Bookbase** global_b)
 {
 	vector<pair<WordInfo, string>> target = (*global_b)->getword();
-	cout << "请输入添加的信息";
+	cout << "璇疯緭鍏ユ坊鍔犵殑淇℃伅";
 	int word_type = (*global_b)->type;
 	cout << word_type;
 	WordInfo w;

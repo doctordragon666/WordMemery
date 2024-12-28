@@ -3,21 +3,21 @@
 int ChooseC::ChooseInterface(Bookbase** global_b)
 {
 	vector<pair<WordInfo, string>> v = (*global_b)->getword();
-	//¸ù¾İÓ¢ÎÄÑ¡ÖĞÎÄ
+	//æ ¹æ®è‹±æ–‡é€‰ä¸­æ–‡
 	system("cls");
 	int score = 0;
 	if (v.size() < 4)
 	{
-		cout << "\t\tÇëÌí¼ÓËÄ¸öµ¥´Ê" << endl;
+		cout << "\t\tè¯·æ·»åŠ å››ä¸ªå•è¯" << endl;
 		return 0;
 	}
 	while (true) {
 		vector<int> book;
 		int t = random(v.size());
 		book.push_back(t);
-		cout << "\t\tÇëÑ¡Ôñµ¥´Ê¡°" << v[t].first.gete() << "¡±µÄÖĞÎÄÒâË¼£¨ÊäÈëM·µ»Ø²Ëµ¥£©£º";
+		cout << "\t\tè¯·é€‰æ‹©å•è¯â€œ" << v[t].first.gete() << "â€çš„ä¸­æ–‡æ„æ€ï¼ˆè¾“å…¥Mè¿”å›èœå•ï¼‰ï¼š";
 
-		string wer = v[t].first.getc();//ÕıÈ·´ğ°¸
+		string wer = v[t].first.getc();//æ­£ç¡®ç­”æ¡ˆ
 		shuffle_word(book, v.size(), 4);
 		for (int i = 0; i < 4; i++) 
 		{
@@ -25,11 +25,11 @@ int ChooseC::ChooseInterface(Bookbase** global_b)
 			cout.put('A' + i);
 			cout << "." << v[book[i]].first.getc() << "     ";
 		}
-		cout << endl << "\t\t´ğ°¸£º";
+		cout << endl << "\t\tç­”æ¡ˆï¼š";
 		char answer;
 		cin >> answer;
 		if (answer == 'M') {
-			cout << "\n\n\t\t±¾´Î×Ü¹²µÃ" << score << "·Ö!!!\n\n\t\t";
+			cout << "\n\n\t\tæœ¬æ¬¡æ€»å…±å¾—" << score << "åˆ†!!!\n\n\t\t";
 			system("pause");
 			system("cls");
 			(*global_b)->save(v);
@@ -39,7 +39,7 @@ int ChooseC::ChooseInterface(Bookbase** global_b)
 		{
 			if (answer - 'A' > 4 || answer - 'A' < 0)
 			{
-				cout << "\n\t\tÊäÈëÓĞÎó£¡£¡\n\n";
+				cout << "\n\t\tè¾“å…¥æœ‰è¯¯ï¼ï¼\n\n";
 				cin >> answer;
 				continue;
 			}
@@ -47,15 +47,15 @@ int ChooseC::ChooseInterface(Bookbase** global_b)
 		}
 		if (v[book[answer - 'A']].first.getc() == wer)
 		{
-			cout << "\n\t\t¹§Ï²Äã´ğ¶ÔÁË!!!,·ÖÊı£º" << ++score << "\n\n\t\t" << endl;
+			cout << "\n\t\tæ­å–œä½ ç­”å¯¹äº†!!!,åˆ†æ•°ï¼š" << ++score << "\n\n\t\t" << endl;
 		}
 		else
 		{
-			cout << "\n\t\t´ğ°¸´íÎó£¬ÕıÈ·´ğ°¸ÊÇ£º" << endl;
+			cout << "\n\t\tç­”æ¡ˆé”™è¯¯ï¼Œæ­£ç¡®ç­”æ¡ˆæ˜¯ï¼š" << endl;
 			cout << wer << endl << endl;
 			++v[t].first;
 		}
-		cout << "\n\t\t<»Ø³µÏÂÒ»Ìâ>";
+		cout << "\n\t\t<å›è½¦ä¸‹ä¸€é¢˜>";
 		system("pause");
 		system("cls");
 		book.clear();

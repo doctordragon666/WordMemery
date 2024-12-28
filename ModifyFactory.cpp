@@ -3,10 +3,10 @@
 int ModifyFactory::AlgorithmInterface(Bookbase** global_b)
 {
 	Modify* mod = new Modify();
-	cout << "ÇëÑ¡ÔñÄ£Ê½-1½áÊø" << endl;
-	cout << "1.Ôö¼Ó" << endl;
-	cout << "2.É¾³ý" << endl;
-	cout << "3.ÐÞ¸Ä" << endl;
+	cout << "è¯·é€‰æ‹©æ¨¡å¼-1ç»“æŸ" << endl;
+	cout << "1.å¢žåŠ " << endl;
+	cout << "2.åˆ é™¤" << endl;
+	cout << "3.ä¿®æ”¹" << endl;
 	cout << "4.SQL" << endl;
 	int choose = 0;
 	cin >> choose;
@@ -35,11 +35,11 @@ int ModifyFactory::AlgorithmInterface(Bookbase** global_b)
 	}
 	if (mod->ModifyAlgorithm(global_b))
 	{
-		cout << "ÐÞ¸Ä³É¹¦" << endl;
+		cout << "ä¿®æ”¹æˆåŠŸ" << endl;
 	}
 	else
 	{
-		cout << "ÐÞ¸ÄÊ§°ÜÇë²é¿´ÈÕÖ¾" << endl;
+		cout << "ä¿®æ”¹å¤±è´¥è¯·æŸ¥çœ‹æ—¥å¿—" << endl;
 		Record("modify_error").Save();
 	}
 	return 0;

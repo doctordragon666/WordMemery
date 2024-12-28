@@ -2,7 +2,7 @@
 
 Xinghuo::Xinghuo()
 {
-	cout << "星火导入成功";
+	cout << "鏄熺伀瀵煎叆鎴愬姛";
 }
 
 //Xinghuo();

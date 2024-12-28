@@ -2,7 +2,7 @@
 
 void BookWord::showself()
 {
-	cout << English << Chinese << m_error_time << "µÚ" << unit << "µ¥Ôª À´Ô´£º" << book << endl;
+	cout << English << Chinese << m_error_time << "ç¬¬" << unit << "å•å…ƒ æ¥æºï¼š" << book << endl;
 }
 
 BookWord::BookWord()
@@ -16,7 +16,7 @@ BookWord::BookWord(WordInfo w, string s)
 	vector<string> tmp = split(s, ' ');
 	if (tmp.size() < 2)
 	{
-		cout << "²ÎÊı´«µİÓĞÎó£¬ÇëÖØÆô³ÌĞò";
+		cout << "å‚æ•°ä¼ é€’æœ‰è¯¯ï¼Œè¯·é‡å¯ç¨‹åº";
 		exit(0);
 	}
 	this->book = tmp[0];
@@ -29,7 +29,7 @@ BookWord::BookWord(WordInfo w, string s)
 BookWord& BookWord::operator++()
 {
 	++m_error_time;
-	return *this;//·µ»ØÒıÓÃ£¬ÒòÎªÃ¿´ÎÖ»ÄÜ¶ÔÍ¬Ò»itÏà¼Ó
+	return *this;//è¿”å›å¼•ç”¨ï¼Œå› ä¸ºæ¯æ¬¡åªèƒ½å¯¹åŒä¸€itç›¸åŠ 
 }
 
 ostream& operator<<(ostream& out, BookWord& w)

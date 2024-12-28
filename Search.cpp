@@ -1,7 +1,7 @@
 #include "Search.h"
 Search::Search()
 {
-	cout << "ËÑË÷Ä£Ê½¿ªÆô" << endl;
+	cout << "æœç´¢æ¨¡å¼å¼€å¯" << endl;
 }
 
 int Search::AlgorithmInterface(Bookbase** global_b)
@@ -12,7 +12,7 @@ int Search::AlgorithmInterface(Bookbase** global_b)
 	int i;
 	while (true)
 	{
-		cout << "ÇëÊäÈëÄãÒª²éÕÒµÄÄÚÈÝ, ÊäÈëM½áÊø";
+		cout << "è¯·è¾“å…¥ä½ è¦æŸ¥æ‰¾çš„å†…å®¹, è¾“å…¥Mç»“æŸ";
 		cin >> s;
 		if (s == "M")
 		{
@@ -22,21 +22,21 @@ int Search::AlgorithmInterface(Bookbase** global_b)
 		{
 			if (find_mode(v[i], s))
 			{
-				cout << "ÒÑÕÒµ½";
+				cout << "å·²æ‰¾åˆ°";
 				v[i].first.showself();
 				flag = false;
 			}
 		}
 		if (flag)
 		{
-			cout << "²éÕÒÊ§°Ü£¬ÊÇ·ñÌí¼Ó¸Ãµ¥´Ê?Y/N";
+			cout << "æŸ¥æ‰¾å¤±è´¥ï¼Œæ˜¯å¦æ·»åŠ è¯¥å•è¯?Y/N";
 			string choose;
 			cin >> choose;
 			if (choose == "Y")
 			{
-				cout << "ÇëÊäÈëÍê±¸ÐÅÏ¢ÀýÏÂ" << endl;
+				cout << "è¯·è¾“å…¥å®Œå¤‡ä¿¡æ¯ä¾‹ä¸‹" << endl;
 				v[0].first.showself();
-				cout << "Î´Íê´ýÐø" << endl;
+				cout << "æœªå®Œå¾…ç»­" << endl;
 			}
 		}
 	}

@@ -14,7 +14,7 @@ bool Revise::ModifyAlgorithm(Bookbase** global_b)
 
 	while (true)
 	{
-		cout << "ÇëÊäÈëÄãÒªÐÞ¸ÄµÄºÅÂë, °´-1ÍË³öÐÞ¸Ä";
+		cout << "è¯·è¾“å…¥ä½ è¦ä¿®æ”¹çš„å·ç , æŒ‰-1é€€å‡ºä¿®æ”¹";
 		int num;
 		cin >> num;
 		if (num == -1)
@@ -22,7 +22,7 @@ bool Revise::ModifyAlgorithm(Bookbase** global_b)
 			return false;
 		}
 		(*global_b)->example();
-		cout << "°´M¼üÍË³ö" << endl;
+		cout << "æŒ‰Mé”®é€€å‡º" << endl;
 
 		string e;
 		string c;
@@ -42,7 +42,7 @@ bool Revise::ModifyAlgorithm(Bookbase** global_b)
 		WordInfo w(e, c);
 		target[num] = make_pair(w, s);
 
-		cout << endl << "Ìí¼Ó³É¹¦" << endl;
+		cout << endl << "æ·»åŠ æˆåŠŸ" << endl;
 	}
 
 	(*global_b)->save(target);

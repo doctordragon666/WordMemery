@@ -2,16 +2,16 @@
 
 WordBook::WordBook()
 {
-	cout << "×ÜÊé¿â´´½¨" << endl;
-	cout << "×ÜÊé¿â¿ªÊ¼¼ÓÔØ" << endl;
+	cout << "æ€»ä¹¦åº“åˆ›å»º" << endl;
+	cout << "æ€»ä¹¦åº“å¼€å§‹åŠ è½½" << endl;
 	ifstream ifs(TEXT_FILE, ios::out);
 	if (!ifs.is_open())
 	{
-		cout << "ÎÄ¼þ´ò¿ªÊ§°Ü";
+		cout << "æ–‡ä»¶æ‰“å¼€å¤±è´¥";
 		return;
 	}
 	BookWord w;
-	while (ifs >> w) //ÖðÐÐ¶ÁÈ¡£¬Ö±µ½½áÊø
+	while (ifs >> w) //é€è¡Œè¯»å–ï¼Œç›´åˆ°ç»“æŸ
 	{
 		this->m_word.push_back(w);
 	}
@@ -23,7 +23,7 @@ WordBook::~WordBook()
 	ofstream ofs(TEXT_FILE, ios::in | ios::trunc);
 	if (!ofs.is_open())
 	{
-		cout << "ÎÄ¼þ´ò¿ªÊ§°Ü";
+		cout << "æ–‡ä»¶æ‰“å¼€å¤±è´¥";
 		return;
 	}
 	for (vector<BookWord>::iterator it = m_word.begin(); it != m_word.end(); it++)

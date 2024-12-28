@@ -5,15 +5,15 @@ int Show::AlgorithmInterface(Bookbase** global_b)
 {
 	if (!global_b)
 	{
-		cout << "ÇëÖØÊÔ" << endl;
+		cout << "è¯·é‡è¯•" << endl;
 		return 0;
 	}
 	if (*global_b == nullptr)
 	{
-		cout << "ÇëÖØÊÔ" << endl;
+		cout << "è¯·é‡è¯•" << endl;
 		return 0;
 	}
 	(*global_b)->show();
-	cout << "ÏÔÊ¾Ëã·¨µ÷ÓÃ" << endl;
+	cout << "æ˜¾ç¤ºç®—æ³•è°ƒç”¨" << endl;
 	return 0;
 }

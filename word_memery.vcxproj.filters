@@ -240,11 +240,6 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Resource.rc">
-      <Filter>资源文件</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="icon1.ico">
       <Filter>资源文件</Filter>
     </Image>
